@@ -36,3 +36,11 @@ const Cocktail2: Mixer = {
 }
 
 console.log("Cocktail 2: ", mixCocktail(Schnaps2, Cocktail2));
+
+const output = document.querySelector<HTMLDivElement>("#output")!;
+
+const meinCocktail = mixCocktail(Schnaps2, Cocktail2);
+
+// const meinCocktail: string = JSON.stringify(Cocktail1);
+
+output.innerHTML = `<p>${JSON.stringify(meinCocktail.name)}</p>`;
